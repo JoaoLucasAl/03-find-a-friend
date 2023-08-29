@@ -1,6 +1,6 @@
 import { Org, Prisma } from "@prisma/client";
 import { OrgsRepository } from "../orgs-repositories";
-import { randomUUID } from "crypto";
+import { randomUUID } from "node:crypto";
 
 export class InMemoryOrgsRepository implements OrgsRepository{
     
@@ -22,8 +22,8 @@ export class InMemoryOrgsRepository implements OrgsRepository{
             password_hash: data.password_hash,
             city: data.city,
             phone: data.phone,
-            createdAt: new Date(),
-            updatedAt: new Date()
+            created_at: new Date(),
+            updated_at: new Date()
         }
 
         this.orgs.push(org);
