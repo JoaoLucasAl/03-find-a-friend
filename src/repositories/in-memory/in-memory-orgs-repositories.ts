@@ -10,11 +10,15 @@ export class InMemoryOrgsRepository implements OrgsRepository{
         return this.orgs.find(org => org.id === id) || null;
     }
 
+    async findByEmail(email: string) {
+        return this.orgs.find(org => org.email === email) || null;
+    }
+
     async queryByCity(city: string) {
         return this.orgs.filter(org => org.city === city);
     }
 
-    async create(data: Prisma.OrgCreateInput) {
+    async register(data: Prisma.OrgCreateInput) {
         const org = {
             id: data.id ?? randomUUID(),
             name: data.name,
