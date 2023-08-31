@@ -7,11 +7,9 @@ Find A Friend
 - [x] Deve ser possível cadastrar um pet
 - [x] Deve ser possível listar todos os pets disponíveis para adoção em uma cidade
 - [x] Deve ser possível filtrar pets por suas características
-- [ ] Deve ser possível visualizar detalhes de um pet para adoção
+- [x] Deve ser possível visualizar detalhes de um pet para adoção
 - [x] Deve ser possível se cadastrar como uma ORG
-- [ ] Deve ser possível Buscar todos os estados do Brasil
-- [ ] Deve ser possível Buscar todas as cidades de um estado do Brasil
-- [ ] Deve ser possível realizar login como uma ORG
+- [x] Deve ser possível realizar login como uma ORG
 
 ### RNs (Regras de negócio)
 
