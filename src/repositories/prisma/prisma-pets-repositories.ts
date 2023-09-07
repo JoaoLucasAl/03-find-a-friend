@@ -33,6 +33,14 @@ export class PrismaPetsRepository implements PetsRepository {
         return pets;
     }
 
+    async queryByOrgId(orgId: string) {
+        return await prisma.pet.findMany({
+            where: {
+                org_id: orgId,
+            },
+        })
+    }
+    
     async create(data: Prisma.PetUncheckedCreateInput){
         const pet = await prisma.pet.create({
             data,

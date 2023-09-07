@@ -44,8 +44,6 @@ export async function authenticate(request: FastifyRequest, reply: FastifyReply)
         .status(200)
         .send({token})
 
-            
-
     } catch (error) {
         
         if (error instanceof InvalidCredentialsError){

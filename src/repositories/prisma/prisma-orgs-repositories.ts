@@ -23,7 +23,6 @@ export class PrismaOrgsRepositories implements OrgsRepository {
         return org;
     }
 
-
     async queryByCity(city: string){
         const orgs = await prisma.org.findMany({
             where: {

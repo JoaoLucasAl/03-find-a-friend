@@ -23,6 +23,11 @@ export class InMemoryPetsRepository implements PetsRepository {
         return queryPets;
 
     }
+
+    async queryByOrgId(orgId: string) {
+        return this.pets.filter(pet => pet.org_id === orgId);
+    }
+    
     async create(data: Prisma.PetUncheckedCreateInput) {
         const pet = {
             id: data.id ?? randomUUID(),
