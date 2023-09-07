@@ -15,5 +15,4 @@ export async function orgsRoutes(app: FastifyInstance){
 
     app.patch('/token/refresh', refresh)
 
-
 }

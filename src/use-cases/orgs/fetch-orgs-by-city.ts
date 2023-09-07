@@ -1,4 +1,3 @@
-import { FindPetsByQueryProps } from "@/@types";
 import { OrgsRepository } from "@/repositories/orgs-repositories";
 import { Org } from "@prisma/client";
 

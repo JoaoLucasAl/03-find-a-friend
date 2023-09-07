@@ -1,4 +1,3 @@
-import { makefetchOrgsByCityUseCase } from "@/use-cases/factories/make-fetch-orgs-by-city-use-case";
 import { makeFetchPetsByOrgIdUseCase } from "@/use-cases/factories/make-fetch-pets-by-org-id";
 import { FastifyReply, FastifyRequest } from "fastify";
 import { z } from "zod";
