@@ -11,6 +11,6 @@ export async function petsRoutes(app: FastifyInstance){
 
     app.get("/pets/:id", getPet)    
     app.get("/pets/fetch/:org_id", fetchPetsByOrg)
-    app.put("/pets/fetch", fetchPetsByCharacteristics)
+    app.get("/pets/fetch", fetchPetsByCharacteristics)
 
 }

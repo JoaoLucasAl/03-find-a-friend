@@ -4,7 +4,7 @@ import { z } from "zod";
 
 export async function fetchPetsByCharacteristics(request: FastifyRequest, reply: FastifyReply) {
     
-    const fetchPetsByCharacteristicsBodySchema = z.object({
+    const fetchPetsByCharacteristicsQuerySchema = z.object({
         city: z.string(),
         type: z.string().optional(),
         breed: z.string().optional(),
@@ -13,7 +13,7 @@ export async function fetchPetsByCharacteristics(request: FastifyRequest, reply:
         weight: z.number().positive().optional()
     })
 
-    const { city, type, breed, color, age, weight } = fetchPetsByCharacteristicsBodySchema.parse(request.body)
+    const { city, type, breed, color, age, weight } = fetchPetsByCharacteristicsQuerySchema.parse(request.query)
 
     try {
 
