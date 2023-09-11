@@ -28,7 +28,9 @@ export async function fetchPetsByCharacteristics(request: FastifyRequest, reply:
             weight
         })
 
-        reply.status(200).send(pets);
+        reply.status(200).send({
+            pets
+        });
         
     } catch (error) {
         reply.status(400).send({error})

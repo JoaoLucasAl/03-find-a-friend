@@ -16,7 +16,9 @@ export async function fetchOrgsByCity(request: FastifyRequest, reply: FastifyRep
 
         const { orgs } = await fetchOrgsByCityUseCase.execute({city})
 
-        reply.status(200).send(orgs);
+        reply.status(200).send({
+            orgs
+        });
         
     } catch (error) {
         reply.status(400).send({error})

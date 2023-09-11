@@ -18,7 +18,9 @@ export async function fetchPetsByOrg(request: FastifyRequest, reply: FastifyRepl
             orgId: org_id,
         })
 
-        reply.status(200).send(pets);
+        reply.status(200).send({
+            pets
+        });
         
     } catch (error) {
         reply.status(400).send({error})

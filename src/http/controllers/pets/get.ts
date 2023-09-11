@@ -18,7 +18,9 @@ export async function getPet(request: FastifyRequest, reply: FastifyReply) {
             petId: id
         })
 
-        reply.status(200).send(pet);
+        reply.status(200).send({
+            pet
+        });
         
     } catch (error) {
         reply.status(400).send({error})
